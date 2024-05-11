@@ -1,10 +1,12 @@
 import React from 'react';
+import '../../styles/MainContent.css';
 
-function MainContent({ title, onCreateTransaction }) {
+function MainContent({ title, createElementButton }) {
   return (
     <div className="main-content">
       <h2>{title}</h2>
-      <button onClick={onCreateTransaction}>Create Transaction</button>
+      {createElementButton}
+      {/* {children} */}
     </div>
   );
 }

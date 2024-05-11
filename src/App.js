@@ -1,10 +1,8 @@
-// App.js
 import React from 'react';
 import Dashboard from './Components/Dashboard';
 
 function App() {
-  // Dummy data for demonstration
-  const sidebarItems = ['Dashboard', 'Transactions', 'Reports'];
+  const sidebarItems = ['Dashboard', 'Chart of Accounts', 'Transactions', 'People', 'Banking', 'Bill & Invoices', 'Files', 'Reports'];
   const topMenuItems = ['Home', 'Profile', 'Settings'];
   const mainContent = 'Main content goes here.';
 
