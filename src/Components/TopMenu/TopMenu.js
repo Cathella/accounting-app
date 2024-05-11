@@ -1,5 +1,6 @@
 // TopMenu.js
 import React from 'react';
+import '../../styles/TopMenu.css';
 
 function TopMenu({ menuItems }) {
   return (
