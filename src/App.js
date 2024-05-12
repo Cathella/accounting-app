@@ -1,19 +1,20 @@
-import React from 'react';
-import Dashboard from './Components/Dashboard';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Transactions from './pages/Transactions';
+import SideNav from './components/SideNav';
+import "./App.css";
 
 function App() {
-  const sidebarItems = ['Dashboard', 'Chart of Accounts', 'Transactions', 'People', 'Banking', 'Bill & Invoices', 'Files', 'Reports'];
-  const topMenuItems = ['Home', 'Profile', 'Settings'];
-  const mainContent = 'Main content goes here.';
-
   return (
-    <div className="App">
-      <Dashboard
-        sidebarItems={sidebarItems}
-        topMenuItems={topMenuItems}
-        mainContent={mainContent}
-      />
-    </div>
+    <BrowserRouter>
+      <div>
+        <SideNav />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/transactions" element={<Transactions />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
