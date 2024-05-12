@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LayoutDashboard, Files, ArrowRightLeft, Users, CreditCard, ReceiptText, FileText, FolderClosed, Settings } from 'lucide-react';
+import { LayoutDashboard, Files, ArrowRightLeft, Users, CreditCard, ReceiptText, FileText, FolderClosed, Settings, ChevronDown } from 'lucide-react';
 
 function SideNav() {
   return (
@@ -22,9 +22,10 @@ function SideNav() {
           </Link>
         </li>
         <li>
-          <Link to="/transactions">
+          <Link to="/accounts">
             <Files />
-            <span>Chart of Accounts</span> 
+            <span>Chart of Accounts</span>
+            <ChevronDown />
           </Link>
         </li>
         <li>
@@ -37,18 +38,21 @@ function SideNav() {
           <Link to="/transactions">
             <Users />
             <span>People</span>
+            <ChevronDown />
           </Link>
         </li>
         <li>
           <Link to="/transactions">
             <CreditCard />
             <span>Banking</span>
+            <ChevronDown />
           </Link>
         </li>
         <li>
           <Link to="/transactions">
             <ReceiptText />
             <span>Bills & invoices</span>
+            <ChevronDown />
           </Link>
         </li>
         <li>
